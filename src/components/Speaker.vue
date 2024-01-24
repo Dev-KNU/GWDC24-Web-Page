@@ -60,7 +60,7 @@ import speaker_blur_img from '@/assets/image/speaker_blur_img.svg'
                         <span>연사4</span>
                         <span class='speaker-text-develop'>현재 연사 섭외중입니다</span>
                     </div>
-                    <span>3월 9일 컨퍼런스, 기대해주세요!</span>
+                    <span>이 이스터에그는 오거나이저 이용현님의 아이디어로 제작되었습니다</span>
                 </div>
             </div>
         </div>
