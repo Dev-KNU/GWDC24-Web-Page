@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div></div>
+    <div class='wrapper'></div>
 </template>
 
 <style scoped>
