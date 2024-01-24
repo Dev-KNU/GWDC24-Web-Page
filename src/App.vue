@@ -2,7 +2,9 @@
 import NavbarHeader from '@/components/NavbarHeader.vue'
 import MainTitle from '@/components/MainTitle.vue'
 import Information from '@/components/Information.vue'
+import Speaker from '@/components/Speaker.vue'
 import Motive from '@/components/Motive.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -10,8 +12,10 @@ import Motive from '@/components/Motive.vue'
     <div class='wrapper'>
         <MainTitle />
         <Information />
+        <Speaker />
         <Motive />
     </div>
+    <Footer />
 </template>
 
 <style scoped>
