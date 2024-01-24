@@ -7,7 +7,7 @@ import TicketButton from '@/components/TicketButton.vue'
         <TicketButton />
         <span>2024년 3월 9일 토요일</span>
         <span>강원대학교 춘천캠퍼스</span>
-        <span class='donation'>후원 문의</span>
+        <a href='mailto:halogen@gwdc.dev' class='donation'>후원 문의</a>
     </div>
 </template>
 
@@ -22,7 +22,7 @@ div.information {
     gap: 18px;
     max-width: 364px;
 
-    span {
+    span, a {
         color: $color-text-200;
         text-align: center;
         font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
@@ -30,6 +30,7 @@ div.information {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        text-decoration: none;
 
         &.donation {
             color: $color-primary-100;
