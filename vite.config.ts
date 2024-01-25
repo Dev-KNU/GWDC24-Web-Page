@@ -10,7 +10,6 @@ export default defineConfig({
     vue(),
     vueJsx(),
   ],
-  //FOR_GITHUB_ACTION base: '/GITHUB_REPOSITORY_NAME',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
