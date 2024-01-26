@@ -5,9 +5,11 @@ import Information from '@/components/Information.vue'
 import Speaker from '@/components/Speaker.vue'
 import Motive from '@/components/Motive.vue'
 import Footer from '@/components/Footer.vue'
+import Background from '@/components/Background.vue'
 </script>
 
 <template>
+    <Background />
     <NavbarHeader />
     <div class='wrapper'>
         <MainTitle />
