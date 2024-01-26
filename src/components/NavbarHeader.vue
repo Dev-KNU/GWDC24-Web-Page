@@ -22,9 +22,10 @@ $color-backgroun-navbar: rgba($color-white, .1);
     align-items: flex-start;
     gap: 10px;
 
-    z-index: 1;
+    z-index: 10;
     width: 100%;
 
+    backdrop-filter: blur(10px);
     background: $color-backgroun-navbar;
 }
 </style>
