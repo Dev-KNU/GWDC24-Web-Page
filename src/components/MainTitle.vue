@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Logo from '@/assets/image/logo2_hologram_2.png'
+import Logo from '@/assets/image/GWDC24.png'
 </script>
 
 <template>
@@ -17,12 +17,15 @@ div.main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
+    row-gap: 0;
     max-width: 364px;
 
+    z-index: 5;
+    position: relative;
+
     .logo {
-        transform: rotate(2.347deg);
-        filter: drop-shadow(0.563px 0.563px 240px rgba(255, 255, 255, 0.32)) drop-shadow(18px 27px 128px rgba(136, 196, 240, 0.16)) drop-shadow(-24px -24px 128px rgba(255, 94, 94, 0.16));
+        //transform: rotate(2.347deg);
+        //filter: drop-shadow(0.563px 0.563px 240px rgba(255, 255, 255, 0.32)) drop-shadow(18px 27px 128px rgba(136, 196, 240, 0.16)) drop-shadow(-24px -24px 128px rgba(255, 94, 94, 0.16));
     }
 
     span.main-title {
@@ -33,6 +36,9 @@ div.main {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        position: absolute;
+        bottom: 0;
     }
 }
 </style>
