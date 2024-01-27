@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { onMounted, Ref, ref } from 'vue'
+import { onMounted, onUnmounted, Ref, ref } from 'vue'
 
 const props = defineProps<{
     icon: string,
@@ -22,6 +22,14 @@ const onResized = () => {
         imageTargetCover.value.style.width = (imageWidth - finalWidth).toString() + "px";
     }
 }
+
+onMounted(() => {
+    window.addEventListener("resize", onResized)
+})
+onUnmounted(() => {
+    window.removeEventListener("resize", onResized)
+})
+
 </script>
 
 <template>
