@@ -1,9 +1,9 @@
 export class BackgroundIconItem {
-    icon: String
+    icon: string
+    opacity: boolean
+    top?: number
     left?: number
     right?: number
-    top: number
-    opacity: boolean
 
     constructor(icon: string, opacity: boolean = false) {
         this.icon = icon

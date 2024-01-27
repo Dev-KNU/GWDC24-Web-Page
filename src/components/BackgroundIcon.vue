@@ -1,5 +1,6 @@
 <script setup lang='ts'>
-import { onMounted, onUnmounted, Ref, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
+import type { Ref } from 'vue'
 
 const props = defineProps<{
     icon: string,
@@ -12,9 +13,9 @@ const imageTarget: Ref<HTMLElement | null> = ref(null);
 const imageTargetCover: Ref<HTMLElement | null> = ref(null);
 const onResized = () => {
     const pageWidth = window.innerWidth
-    const imageWidth = imageTarget.value.clientWidth
+    const imageWidth: number | undefined = imageTarget.value?.clientWidth
     const finalWidth = (
-        props.left ?
+        props.left && imageWidth?
             (props.left + imageWidth) - pageWidth : -1
     );
     // console.log(props.icon)
@@ -22,7 +23,7 @@ const onResized = () => {
     // console.log(`imageWidth: ${imageWidth}`)
     // console.log(`finalWidth: ${finalWidth}`)
     // console.log("------------------------------------")
-    if (finalWidth > 0) {
+    if (finalWidth > 0 && imageTargetCover.value && imageWidth) {
         imageTargetCover.value.style.width = (imageWidth - finalWidth).toString() + "px";
     }
 }
