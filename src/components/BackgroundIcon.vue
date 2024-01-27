@@ -3,9 +3,9 @@ import { onMounted, onUnmounted, Ref, ref } from 'vue'
 
 const props = defineProps<{
     icon: string,
-    left?: string,
-    right?: string,
-    top?: string
+    left?: number,
+    right?: number,
+    top?: number
 }>()
 
 const imageTarget: Ref<HTMLElement | null> = ref(null);
@@ -15,8 +15,7 @@ const onResized = () => {
     const imageWidth = imageTarget.value.clientWidth
     const finalWidth = (
         props.left ?
-            (parseFloat(props.left) + imageWidth) - pageWidth :
-            parseFloat(props.right) - imageWidth
+            (props.left + imageWidth) - pageWidth : -1
     );
     // console.log(props.icon)
     // console.log(`pageWidth: ${pageWidth}`)

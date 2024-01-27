@@ -17,48 +17,51 @@ import Xcode from '@/assets/image/xcode_logo.png'
 import Apple from '@/assets/image/apple_logo.png'
 
 import BackgroundIcon from '@/components/BackgroundIcon.vue'
+import { BackgroundIconItem } from '@/types/BackgroundIconItem'
+
+const backgroundIconItems = [
+    // Opacity = True
+    (new BackgroundIconItem(Python, true)).setPositionLeft(20.85, 221.67),
+    (new BackgroundIconItem(Figma, true)).setPositionRight(6, 223.64),
+    (new BackgroundIconItem(Github, true)).setPositionLeft(135.25, -62.75),
+    (new BackgroundIconItem(Npm, true)).setPositionRight(142.35, 0),
+    (new BackgroundIconItem(Swift, true)).setPositionLeft(496, -40),
+    (new BackgroundIconItem(Android, true)).setPositionRight(397, 0),
+
+    (new BackgroundIconItem(Jabascript, true)).setPositionRight(599.44, 154.77),
+    (new BackgroundIconItem(InteliJ, true)).setPositionLeft(332.42, 222.42),
+    (new BackgroundIconItem(Unity, true)).setPositionRight(278.62, 133.04),
+
+    // Opacity = False
+    (new BackgroundIconItem(Discord, false)).setPositionRight(868, 217),
+    (new BackgroundIconItem(Gpt, false)).setPositionLeft(1201, 35),
+    (new BackgroundIconItem(Terminal, false)).setPositionRight(1151, 0),
+    (new BackgroundIconItem(Notepad, false)).setPositionRight(1680.36, 151.47),
+    (new BackgroundIconItem(Xcode, false)).setPositionLeft(2092, 211),
+    (new BackgroundIconItem(Apple, false)).setPositionRight(2200, 203.16),
+
+]
 
 </script>
 
 <template>
     <div class="backgrounds">
-        <div class='background-main'>
-            <BackgroundIcon :icon='Python' left=221.67 top=20.85 />
-            <BackgroundIcon :icon='Figma' right=223.64 top=6 />
-            <BackgroundIcon :icon='Github' left=-62.75 top=135.25 />
-            <BackgroundIcon :icon='Npm' right=0 top=142.35 />
-            <BackgroundIcon :icon='Swift' left=-40 top=496 />
-            <BackgroundIcon :icon='Android' right=0 top=397 />
-
-            <BackgroundIcon :icon='Jabascript' right=154.77 top=599.44 />
-
-            <BackgroundIcon :icon='InteliJ' left=222.42 top=332.42 />
-            <BackgroundIcon :icon='Unity' right=133.04 top=278.62 />
+        <div class='background-main' v-for='(item, index) in backgroundIconItems.filter(i => i.opacity)'>
+            <BackgroundIcon v-bind:key='index' :icon='item.icon' :left='item.left' :right='item.right' :top='item.top' />
         </div>
-        <div class='other'>
-            <BackgroundIcon :icon='Discord' left=217 top=868 />
-            <BackgroundIcon :icon='Gpt' left=35 top=1201 />
-            <BackgroundIcon :icon='Terminal' right=0 top=1151 />
-            <BackgroundIcon :icon='Notepad' right=151.47 top=1680.36 />
-            <BackgroundIcon :icon='Xcode' left=211 top=2092 />
-            <BackgroundIcon :icon='Apple' right=203.16 top=2200 />
+        <div class='other' v-for='(item, index) in backgroundIconItems.filter(i => !i.opacity)'>
+            <BackgroundIcon v-bind:key='index' :icon='item.icon' :left='item.left' :right='item.right' :top='item.top' />
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 .backgrounds {
-    max-width: 100%;
-
     .background-main {
-        max-width: 100%;
-
         opacity: 0.5;
     }
 
     .logo {
-        max-width: 100%;
-
         filter: blur(6);
         position: absolute;
     }
