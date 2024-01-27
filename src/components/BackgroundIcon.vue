@@ -11,13 +11,18 @@ const props = defineProps<{
 const imageTarget: Ref<HTMLElement | null> = ref(null);
 const imageTargetCover: Ref<HTMLElement | null> = ref(null);
 const onResized = () => {
-    const pageWidth = window.outerWidth
+    const pageWidth = window.innerWidth
     const imageWidth = imageTarget.value.clientWidth
     const finalWidth = (
         props.left ?
             (parseFloat(props.left) + imageWidth) - pageWidth :
             parseFloat(props.right) - imageWidth
     );
+    // console.log(props.icon)
+    // console.log(`pageWidth: ${pageWidth}`)
+    // console.log(`imageWidth: ${imageWidth}`)
+    // console.log(`finalWidth: ${finalWidth}`)
+    // console.log("------------------------------------")
     if (finalWidth > 0) {
         imageTargetCover.value.style.width = (imageWidth - finalWidth).toString() + "px";
     }
