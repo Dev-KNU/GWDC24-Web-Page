@@ -23,7 +23,7 @@ import Background from '@/components/Background.vue'
 <style scoped>
 div.wrapper {
     display: flex;
-    padding: 130px 0 100px 0;
+    padding: 0 0 100px 0;
     flex-direction: column;
     align-items: center;
     gap: 128px;

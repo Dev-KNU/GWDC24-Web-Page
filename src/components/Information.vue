@@ -6,7 +6,7 @@ import TicketButton from '@/components/TicketButton.vue'
     <div class="information">
         <TicketButton />
         <span>2024년 3월 9일 토요일</span>
-        <span>강원대학교 춘천캠퍼스</span>
+        <span class='highlighter'>강원대학교 춘천캠퍼스</span>
         <a href='mailto:halogen@gwdc.dev' class='donation'>후원 문의</a>
     </div>
 </template>
@@ -35,7 +35,13 @@ div.information {
         &.donation {
             color: $color-primary-100;
             font-size: 20px;
+            text-decoration-line: underline;
         }
+    }
+
+    .highlighter {
+        color: $vt-c-white;
+        font-size: 32px;
     }
 }
 </style>
