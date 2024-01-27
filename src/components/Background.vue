@@ -25,9 +25,10 @@ import BackgroundIcon from '@/components/BackgroundIcon.vue'
             <BackgroundIcon :icon='Python' left='221.67px' top='20.85px'/>
             <BackgroundIcon :icon='Figma' right='223.64px' top='6px'/>
             <BackgroundIcon :icon='Github' left='-62.75px' top='135.25px'/>
-            <BackgroundIcon :icon='Npm' right='-62.16px' top='142.35px'/>
+            <BackgroundIcon :icon='Npm' right='0px' top='142.35px'/>
             <BackgroundIcon :icon='Swift' left='-40px' top='496px'/>
-            <BackgroundIcon :icon='Android' right='-98px' top='397px'/>
+            <BackgroundIcon :icon='Android' right='0px' top='397px'/>
+
             <BackgroundIcon :icon='Jabascript' right='154.77px' top='599.44px'/>
 
             <BackgroundIcon :icon='InteliJ' left='222.42px' top='332.42px'/>
@@ -36,7 +37,7 @@ import BackgroundIcon from '@/components/BackgroundIcon.vue'
         <div class='other'>
             <BackgroundIcon :icon='Discord' left='217px' top='868px'/>
             <BackgroundIcon :icon='Gpt' left='35px' top='1201px'/>
-            <BackgroundIcon :icon='Terminal' right='-59.03px' top='1151px'/>
+            <BackgroundIcon :icon='Terminal' right='0px' top='1151px'/>
             <BackgroundIcon :icon='Notepad' right='151.47px' top='1680.36px'/>
             <BackgroundIcon :icon='Xcode' left='211px' top='2092px'/>
             <BackgroundIcon :icon='Apple' right='203.16px' top='2200px'/>
@@ -46,26 +47,18 @@ import BackgroundIcon from '@/components/BackgroundIcon.vue'
 
 <style scoped lang="scss">
 .backgrounds {
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-
-    position: absolute;
+    max-width: 100%;
 
     .background-main {
+        max-width: 100%;
+
         opacity: 0.5;
     }
 
     .logo {
-        display: inline-flex;
-        padding: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-
+        max-width: 100%;
 
         filter: blur(6px);
-
         position: absolute;
     }
 }

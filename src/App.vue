@@ -27,5 +27,6 @@ div.wrapper {
     flex-direction: column;
     align-items: center;
     gap: 128px;
+    overflow-x: hidden;
 }
 </style>
