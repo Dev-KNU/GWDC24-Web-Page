@@ -17,30 +17,31 @@ import Xcode from '@/assets/image/xcode_logo.png'
 import Apple from '@/assets/image/apple_logo.png'
 
 import BackgroundIcon from '@/components/BackgroundIcon.vue'
+
 </script>
 
 <template>
     <div class="backgrounds">
         <div class='background-main'>
-            <BackgroundIcon :icon='Python' left='221.67px' top='20.85px'/>
-            <BackgroundIcon :icon='Figma' right='223.64px' top='6px'/>
-            <BackgroundIcon :icon='Github' left='-62.75px' top='135.25px'/>
-            <BackgroundIcon :icon='Npm' right='0px' top='142.35px'/>
-            <BackgroundIcon :icon='Swift' left='-40px' top='496px'/>
-            <BackgroundIcon :icon='Android' right='0px' top='397px'/>
+            <BackgroundIcon :icon='Python' left=221.67 top=20.85 />
+            <BackgroundIcon :icon='Figma' right=223.64 top=6 />
+            <BackgroundIcon :icon='Github' left=-62.75 top=135.25 />
+            <BackgroundIcon :icon='Npm' right=0 top=142.35 />
+            <BackgroundIcon :icon='Swift' left=-40 top=496 />
+            <BackgroundIcon :icon='Android' right=0 top=397 />
 
-            <BackgroundIcon :icon='Jabascript' right='154.77px' top='599.44px'/>
+            <BackgroundIcon :icon='Jabascript' right=154.77 top=599.44 />
 
-            <BackgroundIcon :icon='InteliJ' left='222.42px' top='332.42px'/>
-            <BackgroundIcon :icon='Unity' right='133.04px' top='278.62px'/>
+            <BackgroundIcon :icon='InteliJ' left=222.42 top=332.42 />
+            <BackgroundIcon :icon='Unity' right=133.04 top=278.62 />
         </div>
         <div class='other'>
-            <BackgroundIcon :icon='Discord' left='217px' top='868px'/>
-            <BackgroundIcon :icon='Gpt' left='35px' top='1201px'/>
-            <BackgroundIcon :icon='Terminal' right='0px' top='1151px'/>
-            <BackgroundIcon :icon='Notepad' right='151.47px' top='1680.36px'/>
-            <BackgroundIcon :icon='Xcode' left='211px' top='2092px'/>
-            <BackgroundIcon :icon='Apple' right='203.16px' top='2200px'/>
+            <BackgroundIcon :icon='Discord' left=217 top=868 />
+            <BackgroundIcon :icon='Gpt' left=35 top=1201 />
+            <BackgroundIcon :icon='Terminal' right=0 top=1151 />
+            <BackgroundIcon :icon='Notepad' right=151.47 top=1680.36 />
+            <BackgroundIcon :icon='Xcode' left=211 top=2092 />
+            <BackgroundIcon :icon='Apple' right=203.16 top=2200 />
         </div>
     </div>
 </template>
@@ -58,7 +59,7 @@ import BackgroundIcon from '@/components/BackgroundIcon.vue'
     .logo {
         max-width: 100%;
 
-        filter: blur(6px);
+        filter: blur(6);
         position: absolute;
     }
 }

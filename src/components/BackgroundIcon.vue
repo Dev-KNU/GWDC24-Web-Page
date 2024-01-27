@@ -1,23 +1,44 @@
 <script setup lang='ts'>
-defineProps<{
-    icon: string,
-    left: string | null,
-    right: string | null,
-    top: string | null
+import { onMounted, Ref, ref } from 'vue'
 
+const props = defineProps<{
+    icon: string,
+    left?: string,
+    right?: string,
+    top?: string
 }>()
+
+const imageTarget: Ref<HTMLElement | null> = ref(null);
+const imageTargetCover: Ref<HTMLElement | null> = ref(null);
+const onResized = () => {
+    const pageWidth = window.outerWidth
+    const imageWidth = imageTarget.value.clientWidth
+    const finalWidth = (
+        props.left ?
+            (parseFloat(props.left) + imageWidth) - pageWidth :
+            parseFloat(props.right) - imageWidth
+    );
+    if (finalWidth > 0) {
+        imageTargetCover.value.style.width = (imageWidth - finalWidth).toString() + "px";
+    }
+}
 </script>
 
 <template>
-    <div class='logo'>
-        <img :src='icon' alt='icon' >
+    <div class='logo' ref='imageTargetCover'>
+        <img :src='icon' alt='icon' ref='imageTarget' v-on:load='onResized'>
     </div>
 </template>
 
 <style scoped lang='scss'>
     .logo {
-        left: v-bind(left);
-        right: v-bind(right);
-        top: v-bind(top);
+        left: calc(v-bind(left) * 1px);
+        right: calc(v-bind(right) * 1px);
+        top: calc(v-bind(top) * 1px);
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+        }
     }
 </style>
