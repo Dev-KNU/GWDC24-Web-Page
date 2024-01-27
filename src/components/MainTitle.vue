@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import MainLogo from '@/components/MainLogo.vue'
+import Logo from '@/assets/image/logo2_hologram_2.png'
 </script>
 
 <template>
     <div class="main">
-        <MainLogo />
+        <img :src='Logo' alt='logo' class='logo'>
         <span class="main-title">강원도 유일의 개발 컨퍼런스, GWDC24가 곧 찾아옵니다.</span>
     </div>
 </template>
@@ -19,6 +19,11 @@ div.main {
     align-items: center;
     gap: 80px;
     max-width: 364px;
+
+    .logo {
+        transform: rotate(2.347deg);
+        filter: drop-shadow(0.563px 0.563px 240px rgba(255, 255, 255, 0.32)) drop-shadow(18px 27px 128px rgba(136, 196, 240, 0.16)) drop-shadow(-24px -24px 128px rgba(255, 94, 94, 0.16));
+    }
 
     span.main-title {
         color: $color-text-100;
