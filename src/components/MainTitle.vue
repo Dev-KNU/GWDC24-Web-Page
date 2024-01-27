@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import MainLogo from '@/assets/image/logo2.svg'
+import MainLogo from '@/components/MainLogo.vue'
 </script>
 
 <template>
     <div class="main">
-        <img :src="MainLogo" alt="main logo" />
+        <MainLogo />
         <span class="main-title">강원도 유일의 개발 컨퍼런스, GWDC24가 곧 찾아옵니다.</span>
     </div>
 </template>
@@ -19,10 +19,6 @@ div.main {
     align-items: center;
     gap: 80px;
     max-width: 364px;
-
-    img {
-        width: 320px;
-    }
 
     span.main-title {
         color: $color-text-100;

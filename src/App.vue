@@ -5,9 +5,11 @@ import Information from '@/components/Information.vue'
 import Speaker from '@/components/Speaker.vue'
 import Motive from '@/components/Motive.vue'
 import Footer from '@/components/Footer.vue'
+import Background from '@/components/Background.vue'
 </script>
 
 <template>
+    <Background />
     <NavbarHeader />
     <div class='wrapper'>
         <MainTitle />
@@ -24,6 +26,6 @@ div.wrapper {
     padding: 130px 0 100px 0;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
+    gap: 128px;
 }
 </style>
