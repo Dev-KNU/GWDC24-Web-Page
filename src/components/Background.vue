@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Python from '@/assets/image/python_logo.png'
 import Figma from '@/assets/image/figma_logo.png'
 import Github from '@/assets/image/github_logo.png'
@@ -45,20 +45,23 @@ const backgroundIconItems = [
 <template>
     <div class="backgrounds">
         <div
-            class="background-main"
             v-for="(item, index) in backgroundIconItems.filter((i) => i.opacity)"
+            :key="index"
+            class="background-main"
         >
             <BackgroundIcon
-                v-bind:key="index"
                 :icon="item.icon"
                 :left="item.left"
                 :right="item.right"
                 :top="item.top"
             />
         </div>
-        <div class="other" v-for="(item, index) in backgroundIconItems.filter((i) => !i.opacity)">
+        <div
+            v-for="(item, index) in backgroundIconItems.filter((i) => !i.opacity)"
+            :key="index"
+            class="other"
+        >
             <BackgroundIcon
-                v-bind:key="index"
                 :icon="item.icon"
                 :left="item.left"
                 :right="item.right"
@@ -68,7 +71,7 @@ const backgroundIconItems = [
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .backgrounds {
     .background-main {
         opacity: 0.5;
