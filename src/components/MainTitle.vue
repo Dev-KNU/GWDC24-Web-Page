@@ -4,14 +4,14 @@ import Logo from '@/assets/image/GWDC24.png'
 
 <template>
     <div class="main">
-        <img :src='Logo' alt='logo' class='logo'>
+        <img :src="Logo" alt="logo" class="logo" />
         <span class="main-title">강원도 유일의 개발 컨퍼런스, GWDC24가 곧 찾아옵니다.</span>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/color';
-@import "pretendard/dist/web/static/pretendard.css";
+@import 'pretendard/dist/web/static/pretendard.css';
 
 div.main {
     display: flex;
@@ -31,7 +31,18 @@ div.main {
     span.main-title {
         color: $color-text-100;
         text-align: center;
-        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        font-family:
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            Roboto,
+            'Helvetica Neue',
+            'Segoe UI',
+            'Apple SD Gothic Neo',
+            'Noto Sans KR',
+            'Malgun Gothic',
+            sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;

@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import TicketButton from '@/components/TicketButton.vue'
 </script>
 
@@ -6,14 +6,14 @@ import TicketButton from '@/components/TicketButton.vue'
     <div class="information">
         <TicketButton />
         <span>2024년 3월 9일 토요일</span>
-        <span class='highlighter'>강원대학교 춘천캠퍼스</span>
-        <a href='mailto:halogen@gwdc.dev' class='donation'>후원 문의</a>
+        <span class="highlighter">강원대학교 춘천캠퍼스</span>
+        <a href="mailto:halogen@gwdc.dev" class="donation">후원 문의</a>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/color';
-@import "pretendard/dist/web/static/pretendard.css";
+@import 'pretendard/dist/web/static/pretendard.css';
 
 div.information {
     display: flex;
@@ -22,10 +22,22 @@ div.information {
     gap: 18px;
     max-width: 364px;
 
-    span, a {
+    span,
+    a {
         color: $color-text-200;
         text-align: center;
-        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        font-family:
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            Roboto,
+            'Helvetica Neue',
+            'Segoe UI',
+            'Apple SD Gothic Neo',
+            'Noto Sans KR',
+            'Malgun Gothic',
+            sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
