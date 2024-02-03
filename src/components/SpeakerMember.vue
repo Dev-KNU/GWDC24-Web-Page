@@ -1,32 +1,28 @@
-<script setup lang='ts'>
-const props = defineProps(
-    {
-        SpeakerImg: String,
-        SpeakerName: String,
-        SpeakerInfo: String,
-        SpeakerSession: String
-    }
-)
+<script setup lang="ts">
+defineProps({
+    SpeakerImg: String,
+    SpeakerName: String,
+    SpeakerInfo: String,
+    SpeakerSession: String
+})
 </script>
 
 <template>
-    <div class='speaker-container'>
+    <div class="speaker-container">
         <div>
-            <img :src='SpeakerImg' alt='GWDC24 speaker'>
+            <img :src="SpeakerImg" alt="GWDC24 speaker" />
         </div>
-        <div class='speaker-text'>
-            <div class='speaker-text-info'>
+        <div class="speaker-text">
+            <div class="speaker-text-info">
                 <span>{{ SpeakerName }}</span>
-                <span class='speaker-text-develop'>{{ SpeakerInfo }}</span>
+                <span class="speaker-text-develop">{{ SpeakerInfo }}</span>
             </div>
             <span>{{ SpeakerSession }}</span>
         </div>
     </div>
 </template>
 
-<style scoped lang='scss'>
-
-
+<style scoped lang="scss">
 .speaker-container {
     img {
         width: 80px;
@@ -54,5 +50,4 @@ const props = defineProps(
         }
     }
 }
-
 </style>
