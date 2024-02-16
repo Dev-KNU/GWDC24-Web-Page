@@ -1,6 +1,6 @@
 <template>
     <a href='https://event-us.kr/gwdc24/event/77961' class="ticket-button">
-        <span class="ticket-button-text">티켓 구매 하기</span>
+        <span class="ticket-button-text">티켓 구입하기</span>
     </a>
 </template>
 
