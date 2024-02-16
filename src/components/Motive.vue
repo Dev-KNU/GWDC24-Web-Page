@@ -49,7 +49,7 @@ div.motive {
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
-        line-height: normal;
+        line-height: 30px;
         letter-spacing: -0.36px;
     }
 
@@ -70,7 +70,7 @@ div.motive {
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
-        line-height: 20px; /* 142.857% */
+        line-height: 24px; /* 142.857% */
         //letter-spacing: -0.28px;
     }
 }

@@ -49,6 +49,7 @@ const speakers: SpeakerItem[] = [
 
 <template>
     <div class="speakers">
+        <h2>Speakers</h2>
         <!-- <div class="speakers-blur">
             <div class="speakers-blur-container">
                 <img :src="speaker_blur_img" alt="speaker blur" />
@@ -81,6 +82,15 @@ $color-backgroun-speaker: $color-primary-100;
         'Noto Sans KR',
         'Malgun Gothic',
         sans-serif;
+
+    h2 {
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 0 0 30px 0;
+    }
 }
 
 .speakers-blur {

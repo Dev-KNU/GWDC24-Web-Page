@@ -12,8 +12,8 @@ import Background from '@/components/Background.vue'
     <NavbarHeader />
     <div class="wrapper">
         <MainTitle />
-        <Speaker />
         <Motive />
+        <Speaker />
     </div>
     <Footer />
 </template>
