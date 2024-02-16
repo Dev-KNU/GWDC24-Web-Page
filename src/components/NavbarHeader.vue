@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import logo from '@/assets/image/logo1.svg'
+import Logo from '@/assets/image/logo1.svg'
 </script>
 
 <template>
     <BNavbar toggleable="lg" container="true">
         <BNavbarBrand href="/">
-            <img :src="logo" alt="GWDC logo version1" />
+            <Logo />
         </BNavbarBrand>
     </BNavbar>
 </template>
@@ -27,6 +27,8 @@ $color-backgroun-navbar: rgba($color-white, 0.1);
 
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
 
     backdrop-filter: blur(10px);
     background: $color-backgroun-navbar;
