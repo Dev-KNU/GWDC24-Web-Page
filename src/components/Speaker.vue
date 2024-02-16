@@ -1,46 +1,62 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import SpeakerMember from '@/components/SpeakerMember.vue'
 
-import speaker_1 from '@/assets/image/speaker_1.svg'
-import speaker_2 from '@/assets/image/speaker_2.svg'
-import speaker_3 from '@/assets/image/speaker_3.svg'
-import speaker_4 from '@/assets/image/speaker_4.svg'
-import speaker_blur_img from '@/assets/image/speaker_blur_img.svg'
+import speaker_1 from '@/assets/image/speaker_1.png'
+import speaker_2 from '@/assets/image/speaker_2.png'
+import speaker_3 from '@/assets/image/speaker_3.png'
+import speaker_4 from '@/assets/image/speaker_4.png'
+import speaker_5 from '@/assets/image/speaker_5.png'
+import type { SpeakerItem } from '@/types/SpeakerItem'
+
+const speakers: SpeakerItem[] = [
+    {
+        image: speaker_1,
+        name: 'vivi',
+        title: '대학생활 200% 활용하기',
+        description: '12:45 ~ 13:30 (45m)',
+        affiliate: '모바일 개발 | 현대자동차'
+    },
+    {
+        image: speaker_2,
+        name: '류석문',
+        title: '프로그래머로 산다는 것',
+        description: '13:45 ~ 14:30 (45m)',
+        affiliate: 'CTO | SOCAR'
+    },
+    {
+        image: speaker_3,
+        name: '구인선',
+        title: '왜 임베디드 개발을 하는가',
+        description: '14:45 ~ 15:15 (30m)',
+        affiliate: '임베디드 개발'
+    },
+    {
+        image: speaker_4,
+        name: 'Choyi',
+        title: '대학생에서 엔지니어로!',
+        description: '15:25 ~ 15:55 (45m)',
+        affiliate: 'iOS 개발 | Swift Korea'
+    },
+    {
+        image: speaker_5,
+        name: '성유진',
+        title: '하고싶은 일만 하면서 살 순 없나요?',
+        description: '16:05 ~ 16:50 (45m)',
+        affiliate: 'Apple Developer Academy'
+    }
+]
 </script>
 
 <template>
     <div class="speakers">
-        <div class="speakers-blur">
+        <!-- <div class="speakers-blur">
             <div class="speakers-blur-container">
                 <img :src="speaker_blur_img" alt="speaker blur" />
                 <span>GWDC24를 빛내 주실 연사진과 내용은 추후 공개 예정입니다.</span>
             </div>
-        </div>
-        <div class="speakers-container">
-            <SpeakerMember
-                SpeakerName="연사1"
-                SpeakerInfo="아직 공개되지 않았습니다"
-                SpeakerSession="궁금해서 여기까지 오셨다면 축하드립니다! 이스터에그를 발견하셨습니다"
-                :SpeakerImg="speaker_1"
-            />
-            <SpeakerMember
-                SpeakerName="연사2"
-                SpeakerInfo="곧 공개될 예정이니 기다려주세요"
-                SpeakerSession="이곳 말고도 다른 곳에 이스터에그가 있으니, 잘 탐색해주세요 :)"
-                :SpeakerImg="speaker_2"
-            />
-            <SpeakerMember
-                SpeakerName="연사3"
-                SpeakerInfo="3월 초, 기대해주세요"
-                SpeakerSession="이 웹페이지는 Vue + TS 기반으로 만들어졌습니다"
-                :SpeakerImg="speaker_3"
-            />
-            <SpeakerMember
-                SpeakerName="연사4"
-                SpeakerInfo="현재 연사 섭외중입니다"
-                SpeakerSession="이 이스터에그는 오거나이저 이용현님의 아이디어로 제작되었습니다"
-                :SpeakerImg="speaker_4"
-            />
+        </div> -->
+        <div class="speakers-container" v-for="(item, index) in speakers" v-bind:key="index">
+            <SpeakerMember :speaker="item" />
         </div>
     </div>
 </template>
@@ -52,8 +68,6 @@ import speaker_blur_img from '@/assets/image/speaker_blur_img.svg'
 $color-backgroun-speaker: $color-primary-100;
 
 .speakers {
-    max-width: 340px;
-
     position: relative;
     font-family:
         'Pretendard',
@@ -116,9 +130,6 @@ $color-backgroun-speaker: $color-primary-100;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    margin: 10px;
-
-    font-size: 14px;
-    font-weight: 500;
+    margin: 16px;
 }
 </style>

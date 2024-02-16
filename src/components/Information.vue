@@ -6,7 +6,7 @@ import TicketButton from '@/components/TicketButton.vue'
     <div class="information">
         <TicketButton />
         <span>2024년 3월 9일 토요일</span>
-        <span class="highlighter">강원대학교 춘천캠퍼스</span>
+        <span class="highlighter">강원대학교 춘천캠퍼스<br/>60주년기념관 국제교류관</span>
         <a href="mailto:halogen@gwdc.dev" class="donation">후원 문의</a>
     </div>
 </template>
@@ -21,6 +21,7 @@ div.information {
     align-items: center;
     gap: 18px;
     max-width: 364px;
+    z-index: 3;
 
     span,
     a {

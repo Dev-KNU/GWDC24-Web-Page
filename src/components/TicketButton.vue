@@ -1,13 +1,13 @@
 <template>
-    <div class="ticket-button">
-        <span class="ticket-button-text">티켓 추후 판매</span>
-    </div>
+    <a href='https://event-us.kr/gwdc24/event/77961' class="ticket-button">
+        <span class="ticket-button-text">티켓 구매 하기</span>
+    </a>
 </template>
 
 <style scoped lang="scss">
 @import '@/assets/color';
 
-div.ticket-button {
+a.ticket-button {
     display: flex;
     padding: 8px 20px;
     justify-content: center;
