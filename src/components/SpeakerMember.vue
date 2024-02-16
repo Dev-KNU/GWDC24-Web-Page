@@ -1,31 +1,32 @@
 <script setup lang="ts">
-defineProps({
-    SpeakerImg: String,
-    SpeakerName: String,
-    SpeakerInfo: String,
-    SpeakerSession: String
-})
+import type { SpeakerItem } from '@/types/SpeakerItem'
+
+defineProps<{
+    speaker: SpeakerItem
+}>();
 </script>
 
 <template>
     <div class="speaker-container">
         <div>
-            <img :src="SpeakerImg" alt="GWDC24 speaker" />
+            <img :src="speaker.image" alt="GWDC24 speaker" />
         </div>
         <div class="speaker-text">
             <div class="speaker-text-info">
-                <span>{{ SpeakerName }}</span>
-                <span class="speaker-text-develop">{{ SpeakerInfo }}</span>
+                <span class='speaker-text-name'>{{ speaker.name }}</span>
+                <span class="speaker-text-affiliate">{{ speaker.affiliate }}</span>
             </div>
-            <span>{{ SpeakerSession }}</span>
+            <span class='speaker-text-title'>{{ speaker.title }}</span>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 .speaker-container {
+
     img {
-        width: 80px;
+        width: 120px;
+        border-radius: 60px;
     }
 
     display: flex;
@@ -38,15 +39,29 @@ defineProps({
         flex-flow: column;
         gap: 8px;
 
+        color: white;
+        font-style: normal;
+        line-height: normal;
+
         .speaker-text-info {
             display: flex;
             flex-flow: column;
             gap: 4px;
 
-            .speaker-text-develop {
-                font-size: 12px;
-                font-weight: 400;
+            .speaker-text-name {
+                font-size: 24px;
+                font-weight: 600;
             }
+
+            .speaker-text-affiliate {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .speaker-text-title {
+            font-size: 20px;
+            font-weight: 600;
         }
     }
 }
