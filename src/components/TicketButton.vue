@@ -1,6 +1,11 @@
+<script lang='ts' setup>
+import ticket_icon from '@/assets/image/ticket.svg'
+</script>
+
 <template>
     <a href="https://event-us.kr/gwdc24/event/77961" class="ticket-button">
-        <span class="ticket-button-text">티켓 구입하기</span>
+        <span class="ticket-button-text">입장 티켓 구매하기</span>
+        <img :src='ticket_icon' alt='ticket-icon' />
     </a>
 </template>
 
