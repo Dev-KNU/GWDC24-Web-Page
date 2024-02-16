@@ -47,17 +47,12 @@ div.main-container {
 
     div.main {
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 88px;
-
-        @media screen and (min-width: $breakpoint-mobile-to-pc) {
-            justify-content: center;
-            align-items: end;
-        }
 
         @media screen and (max-width: $breakpoint-mobile-to-pc) {
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         div.logo {
