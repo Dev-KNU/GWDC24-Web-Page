@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Logo from '@/assets/image/GWDC24.png'
 import Information from '@/components/Information.vue'
+import AnimatedArrowScroll from '@/components/AnimatedArrowScroll.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Information from '@/components/Information.vue'
         <div class="main">
             <div class="logo">
                 <img :src="Logo" alt="logo" class="logo-image" />
+                <AnimatedArrowScroll />
             </div>
             <Information />
         </div>
@@ -20,6 +22,7 @@ import Information from '@/components/Information.vue'
 
 <style lang="scss" scoped>
 @import '@/assets/color';
+@import '@/assets/variable';
 @import 'pretendard/dist/web/static/pretendard.css';
 
 div.main-container {
@@ -28,26 +31,49 @@ div.main-container {
     align-items: center;
 
     z-index: 5;
-    height: 100vh;
+
+    @media screen and (min-width: $breakpoint-mobile-to-pc) {
+        height: 100vh;
+    }
 
     div.main {
-        @media screen and (min-width: 900px) {
-            display: flex;
+        display: flex;
+        gap: 88px;
+
+        @media screen and (min-width: $breakpoint-mobile-to-pc) {
             justify-content: center;
             align-items: end;
-            gap: 88px;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile-to-pc) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         div.logo {
-            width: 400px;
-            height: 499px;
+            @media screen and (min-width: $breakpoint-mobile-to-pc) {
+                width: $image-cut-in-size-width;
+                height: $image-cut-in-size-height;
 
-            img.logo-image {
-                top: -219px;
-                left: -215px;
-                position: relative;
-                //transform: rotate(2.347deg);
-                //filter: drop-shadow(0.563px 0.563px 240px rgba(255, 255, 255, 0.32)) drop-shadow(18px 27px 128px rgba(136, 196, 240, 0.16)) drop-shadow(-24px -24px 128px rgba(255, 94, 94, 0.16));
+                img.logo-image {
+                    top: calc( -1 * ($image-original-size-height - $image-cut-in-size-height) / 2 );
+                    left: calc( -1 * ($image-original-size-width - $image-cut-in-size-width) / 2 );
+                    position: relative;
+                }
+            }
+
+            @media screen and (max-height: $image-original-size-height), (max-width: $image-original-size-width) {
+                height: 100vh;
+
+                img.logo-image {
+                    top: calc((100vh - $image-original-size-height) / 2 );
+                    position: relative;
+                }
+            }
+
+            @media screen and (max-width: $breakpoint-mobile-to-pc) {
+                align-items: center
             }
         }
     }

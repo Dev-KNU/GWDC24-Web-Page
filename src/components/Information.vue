@@ -36,6 +36,7 @@ const conferenceInfo = {
 
 <style lang="scss" scoped>
 @import '@/assets/color';
+@import "@/assets/variable";
 @import 'pretendard/dist/web/static/pretendard.css';
 
 div.information {
@@ -43,6 +44,7 @@ div.information {
     flex-direction: column;
     justify-content: center;
     gap: 64px;
+    z-index: 3;
 
     span, a, h2 {
         color: $color-text-200;
@@ -67,6 +69,10 @@ div.information {
         color: $color-text-100;
         font-size: 48px;
         font-weight: 700;
+
+        @media screen and (max-width: $breakpoint-mobile-to-pc) {
+            text-shadow: -1px 0px $color-background, 0px 1px $color-background, 1px 0px $color-background, 0px -1px $color-background;
+        }
     }
 
     span {
