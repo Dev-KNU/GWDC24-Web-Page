@@ -22,7 +22,7 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/color";
+@import '@/assets/color';
 
 .speaker-container {
     img {

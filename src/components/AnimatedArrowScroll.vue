@@ -4,12 +4,12 @@ import Arrow from '@/assets/image/arrow.svg'
 
 <template>
     <div class="animated_arrow_scroll">
-        <Arrow width='100px' height='100%' />
+        <Arrow width="100px" height="100%" />
     </div>
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/color";
+@import '@/assets/color';
 
 div.animated_arrow_scroll {
     position: absolute;

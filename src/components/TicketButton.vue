@@ -1,4 +1,4 @@
-<script lang='ts' setup>
+<script lang="ts" setup>
 import TicketIcon from '@/assets/image/ticket.svg'
 </script>
 
@@ -19,12 +19,12 @@ a.ticket-button {
     align-items: center;
     gap: 10px;
 
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     border: 2px solid $color-primary-100;
 
     &:hover {
-        background: rgba(255, 255, 255, .05);
+        background: rgba(255, 255, 255, 0.05);
     }
 
     span.ticket-button-text {

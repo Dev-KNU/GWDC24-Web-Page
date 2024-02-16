@@ -6,9 +6,8 @@ import { ref } from 'vue'
 
 const informationElement = ref<InstanceType<typeof Information> | null>(null)
 const onArrowClicked = () => {
-    (
-        informationElement.value?.$refs.reference??
-        document.querySelector('.information')
+    ;(
+        informationElement.value?.$refs.reference ?? document.querySelector('.information')
     )?.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 </script>

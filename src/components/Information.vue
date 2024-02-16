@@ -3,12 +3,12 @@ import TicketButton from '@/components/TicketButton.vue'
 import { ref } from 'vue'
 
 const conferenceInfo = {
-    'date': new Date(2024, 3, 9, 13),
-    'location1': "강원특별자치도 춘천시 강원대학길 1 (강원대학교)",
-    'location2': "강원대학교 춘천캠퍼스",
-    'location3': '60주년기념관 국제회의실(1F)'
+    date: new Date(2024, 3, 9, 13),
+    location1: '강원특별자치도 춘천시 강원대학길 1 (강원대학교)',
+    location2: '강원대학교 춘천캠퍼스',
+    location3: '60주년기념관 국제회의실(1F)'
 }
-const reference = ref<HTMLDivElement | null>();
+const reference = ref<HTMLDivElement | null>()
 
 defineExpose({
     reference
@@ -21,19 +21,16 @@ defineExpose({
         <span>2024년 3월 9일 토요일</span>
         <span class="highlighter">강원대학교 춘천캠퍼스<br />60주년기념관 국제회의실</span>
     </div> -->
-    <div class='information' ref='reference'>
-        <h2>강원도 유일의<br/>개발 컨퍼런스</h2>
+    <div class="information" ref="reference">
+        <h2>강원도 유일의<br />개발 컨퍼런스</h2>
         <div>
             <span>
-
-            {{ conferenceInfo.location2 }}<br/>
-            {{ conferenceInfo.location3 }}<br/>
+                {{ conferenceInfo.location2 }}<br />
+                {{ conferenceInfo.location3 }}<br />
             </span>
             <span>
-
-            {{ conferenceInfo.date.getFullYear() }}.
-            {{ conferenceInfo.date.getMonth() }}.
-            {{ conferenceInfo.date.getDate() }}<br/>
+                {{ conferenceInfo.date.getFullYear() }}. {{ conferenceInfo.date.getMonth() }}.
+                {{ conferenceInfo.date.getDate() }}<br />
             </span>
         </div>
         <ticket-button />
@@ -42,7 +39,7 @@ defineExpose({
 
 <style lang="scss" scoped>
 @import '@/assets/color';
-@import "@/assets/variable";
+@import '@/assets/variable';
 @import 'pretendard/dist/web/static/pretendard.css';
 
 div.information {
@@ -52,7 +49,9 @@ div.information {
     gap: 64px;
     z-index: 3;
 
-    span, a, h2 {
+    span,
+    a,
+    h2 {
         color: $color-text-200;
         font-family:
             'Pretendard',
@@ -77,7 +76,11 @@ div.information {
         font-weight: 700;
 
         @media screen and (max-width: $breakpoint-mobile-to-pc) {
-            text-shadow: -1px 0px $color-background, 0px 1px $color-background, 1px 0px $color-background, 0px -1px $color-background;
+            text-shadow:
+                -1px 0px $color-background,
+                0px 1px $color-background,
+                1px 0px $color-background,
+                0px -1px $color-background;
         }
     }
 
