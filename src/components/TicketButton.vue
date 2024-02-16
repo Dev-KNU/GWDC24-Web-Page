@@ -1,6 +1,11 @@
+<script lang='ts' setup>
+import TicketIcon from '@/assets/image/ticket.svg'
+</script>
+
 <template>
-    <a href="https://event-us.kr/gwdc24/event/77961" class="ticket-button">
-        <span class="ticket-button-text">티켓 구입하기</span>
+    <a href="https://event-us.kr/m/77961/14164" class="ticket-button">
+        <span class="ticket-button-text">입장 티켓 구매하기</span>
+        <TicketIcon />
     </a>
 </template>
 
@@ -14,8 +19,13 @@ a.ticket-button {
     align-items: center;
     gap: 10px;
 
+    background: rgba(255, 255, 255, .1);
     border-radius: 50px;
     border: 2px solid $color-primary-100;
+
+    &:hover {
+        background: rgba(255, 255, 255, .05);
+    }
 
     span.ticket-button-text {
         color: $color-primary-100;

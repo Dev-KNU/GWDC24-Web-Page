@@ -12,7 +12,7 @@ const props = defineProps<{
 const imageTarget: Ref<HTMLElement | null> = ref(null)
 const imageTargetCover: Ref<HTMLElement | null> = ref(null)
 const onResized = () => {
-    const pageWidth = window.innerWidth
+    const pageWidth = window.outerWidth
     const imageWidth: number | undefined = imageTarget.value?.clientWidth
     const finalWidth = props.left && imageWidth ? props.left + imageWidth - pageWidth : -1
     // console.log(props.icon)
