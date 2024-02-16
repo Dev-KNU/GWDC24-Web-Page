@@ -25,6 +25,9 @@ $color-backgroun-navbar: rgba($color-white, 0.1);
     z-index: 10;
     width: 100%;
 
+    position: fixed;
+    top: 0;
+
     backdrop-filter: blur(10px);
     background: $color-backgroun-navbar;
 }
