@@ -3,7 +3,7 @@ import type { SpeakerItem } from '@/types/SpeakerItem'
 
 defineProps<{
     speaker: SpeakerItem
-}>();
+}>()
 </script>
 
 <template>
@@ -13,17 +13,16 @@ defineProps<{
         </div>
         <div class="speaker-text">
             <div class="speaker-text-info">
-                <span class='speaker-text-name'>{{ speaker.name }}</span>
+                <span class="speaker-text-name">{{ speaker.name }}</span>
                 <span class="speaker-text-affiliate">{{ speaker.affiliate }}</span>
             </div>
-            <span class='speaker-text-title'>{{ speaker.title }}</span>
+            <span class="speaker-text-title">{{ speaker.title }}</span>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 .speaker-container {
-
     img {
         width: 120px;
         border-radius: 60px;
