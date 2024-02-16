@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import TicketButton from '@/components/TicketButton.vue'
+import { ref } from 'vue'
 
 const conferenceInfo = {
     'date': new Date(2024, 3, 9, 13),
@@ -7,6 +8,11 @@ const conferenceInfo = {
     'location2': "강원대학교 춘천캠퍼스",
     'location3': '60주년기념관 국제회의실(1F)'
 }
+const reference = ref<HTMLDivElement | null>();
+
+defineExpose({
+    reference
+})
 </script>
 
 <template>
@@ -15,7 +21,7 @@ const conferenceInfo = {
         <span>2024년 3월 9일 토요일</span>
         <span class="highlighter">강원대학교 춘천캠퍼스<br />60주년기념관 국제회의실</span>
     </div> -->
-    <div class='information'>
+    <div class='information' ref='reference'>
         <h2>강원도 유일의<br/>개발 컨퍼런스</h2>
         <div>
             <span>

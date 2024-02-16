@@ -2,6 +2,15 @@
 import Logo from '@/assets/image/GWDC24.png'
 import Information from '@/components/Information.vue'
 import AnimatedArrowScroll from '@/components/AnimatedArrowScroll.vue'
+import { ref } from 'vue'
+
+const informationElement = ref<InstanceType<typeof Information> | null>(null)
+const onArrowClicked = () => {
+    (
+        informationElement.value?.$refs.reference??
+        document.querySelector('.information')
+    )?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
 </script>
 
 <template>
@@ -13,9 +22,9 @@ import AnimatedArrowScroll from '@/components/AnimatedArrowScroll.vue'
         <div class="main">
             <div class="logo">
                 <img :src="Logo" alt="logo" class="logo-image" />
-                <AnimatedArrowScroll />
+                <AnimatedArrowScroll v-on:click="onArrowClicked" />
             </div>
-            <Information />
+            <Information ref="informationElement" />
         </div>
     </div>
 </template>
@@ -57,23 +66,31 @@ div.main-container {
                 height: $image-cut-in-size-height;
 
                 img.logo-image {
-                    top: calc( -1 * ($image-original-size-height - $image-cut-in-size-height) / 2 );
-                    left: calc( -1 * ($image-original-size-width - $image-cut-in-size-width) / 2 );
+                    top: calc(-1 * ($image-original-size-height - $image-cut-in-size-height) / 2);
+                    left: calc(-1 * ($image-original-size-width - $image-cut-in-size-width) / 2);
                     position: relative;
                 }
-            }
 
-            @media screen and (max-height: $image-original-size-height), (max-width: $image-original-size-width) {
-                height: 100vh;
-
-                img.logo-image {
-                    top: calc((100vh - $image-original-size-height) / 2 );
-                    position: relative;
+                div.animated_arrow_scroll {
+                    display: none;
                 }
             }
 
             @media screen and (max-width: $breakpoint-mobile-to-pc) {
-                align-items: center
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            @media screen and (max-height: $image-original-size-height),
+                (max-width: $image-original-size-width) {
+                height: 100vh;
+
+                img.logo-image {
+                    top: calc((100vh - $image-original-size-height) / 2);
+                    position: relative;
+                }
             }
         }
     }
