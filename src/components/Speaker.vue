@@ -35,7 +35,7 @@ const speakers: SpeakerItem[] = [
         name: 'Choyi',
         title: '대학생에서 엔지니어로!',
         description: '15:25 ~ 15:55 (45m)',
-        affiliate: 'iOS 개발 | Swift Korea'
+        affiliate: 'iOS 개발 | Swit Korea'
     },
     {
         image: speaker_5,
