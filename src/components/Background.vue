@@ -31,11 +31,12 @@ const backgroundIconItems = [
     new BackgroundIconItem(Jabascript, true).setPositionRight(599.44, 154.77),
     new BackgroundIconItem(InteliJ, true).setPositionLeft(332.42, 222.42),
     new BackgroundIconItem(Unity, true).setPositionRight(278.62, 133.04),
+    new BackgroundIconItem(Discord, true).setPositionRight(868, 217),
 
     // Opacity = False
-    new BackgroundIconItem(Discord, false).setPositionRight(868, 217),
-    new BackgroundIconItem(Gpt, false).setPositionLeft(1201, 35),
-    new BackgroundIconItem(Terminal, false).setPositionRight(1151, 0),
+
+    new BackgroundIconItem(Terminal, false).setPositionLeft(1201, 35),
+    new BackgroundIconItem(Gpt, false).setPositionRight(1151, 0),
     new BackgroundIconItem(Notepad, false).setPositionRight(1680.36, 151.47),
     new BackgroundIconItem(Xcode, false).setPositionLeft(2092, 211),
     new BackgroundIconItem(Apple, false).setPositionRight(2200, 203.16)

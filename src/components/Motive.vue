@@ -31,6 +31,7 @@ div.motive {
     flex-direction: column;
     gap: 20px;
     max-width: 340px;
+    z-index: 3;
 
     h3 {
         color: $color-text-100;
